@@ -10,10 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriversClass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//driver setup
 		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-
 		//webdriver
 		WebDriver driver = new ChromeDriver();
 
@@ -23,7 +21,11 @@ public class DriversClass {
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		driver.findElement(By.xpath("//a[@class='btn btn-hero btns btn-success hero-right']")).click();
+		WebElement explore = driver.findElement(By.xpath("//a[@class='btn btn-hero btns btn-light-blue']"));
+		
+		explore.click();
+		
+		//driver.findElement(By.xpath("//a[@class='btn btn-hero btns btn-success hero-right']")).click();
 		
 		
 		driver.navigate().back();
@@ -33,21 +35,21 @@ public class DriversClass {
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		driver.navigate().to("https://phptravels.org/clientarea.phpS");
+		driver.navigate().to("https://phptravels.org/clientarea.php");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.quit();
+		driver.close();
 		
 		
-		/*
-
+		
+/*
 		WebElement loginbutton = driver.findElement(By.xpath("//a[@class='btn yx-nfn yx-njg']"));
 
 		if(loginbutton.isDisplayed()) {
 			loginbutton.click();
 		}else {
 			System.out.println("Button not displayed");
-		}
-*/
+		}*/
+
 	}
 
 }

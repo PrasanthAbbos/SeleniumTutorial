@@ -27,9 +27,9 @@ public class WindowHandling {
 		
 		
 		String parentwindow = driver.getWindowHandle();
-		
+		System.out.println(parentwindow);
 		Set<String> winodws = driver.getWindowHandles();
-		
+		System.out.println(winodws);
 		int sizseofwin = winodws.size();
 		System.out.println(sizseofwin);
 		int i=0;
@@ -41,7 +41,7 @@ public class WindowHandling {
 		}
 		
 		
-		driver.findElement(By.xpath("//a[contains(text(),'GoDaddy.com')]")).click();
+	//	driver.findElement(By.xpath("//a[contains(text(),'GoDaddy.com')]")).click();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.close();

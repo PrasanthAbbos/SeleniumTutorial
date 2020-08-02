@@ -28,6 +28,7 @@ public class Alertsdemo {
 		Alert ale = driver.switchTo().alert();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		ale.accept();	
+
 	}
 
 }

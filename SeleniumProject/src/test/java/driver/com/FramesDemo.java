@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FramesDemo {
@@ -20,8 +21,10 @@ public class FramesDemo {
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		WebElement fr = driver.findElement(By.id("singleframe"));
 		
-		driver.switchTo().frame("singleframe");
+		driver.switchTo().frame(fr);
+		
 		
 		driver.findElement(By.xpath("/html/body/section/div/div/div/input")).sendKeys("Raj");
 	}
