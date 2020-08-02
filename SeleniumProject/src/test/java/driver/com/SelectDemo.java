@@ -25,6 +25,8 @@ public class SelectDemo {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		/*	WebElement select =  driver.findElement(By.id("Skills"));
+		
+		 http://demo.automationtesting.in/Register.html
 
 		Select sel =  new Select(select);
 
